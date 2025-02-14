@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="software.css">
+    <link rel="stylesheet" href="../carousel.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="header-container">
+            <h1>Software Projects</h1>
+        </div>
+        <div style="color: #F2EBE3; margin-bottom: 30px;">
+            From full stack websites to local servers, take a look at some of the personal and school projects I have taken on.
+        </div>
+            <div class="tab hackathon">
+                <div class="tab-header">
+                    <h2 style="display: flex; align-items: center; gap: 10px;">
+                        CuseHacks Grocery Store Pathfinder | 
+                        <img src="softwareMedia/cusehacks_logo.png" alt="Cusehacks Logo" style="width: 30px; height: auto;">
+                    </h2>
+                    <i class="arrow"></i>
+                </div>
+                <div class="tab-content">
+                    <div class="content-wrapper">
+                        <div style="line-height:150%;">
+                            <strong>Skills</strong>: Python, SQLite, Selenium, A*, matplotlib, tkinter
+                            <br>
+                            <br>
+                            <strong>What is it?</strong> - A project developed in under 24 hours for the Fall 2024 CuseHacks Hackathon with four other friends. 
+                            <br>
+                            <br>
+                            <strong>Goal</strong>: Develop an application where a user could select items they need and be given an optimal path to walk the store, which would cut down the total time spent getting groceries.
+                            <br>
+                            <br>
+                            <strong>Process</strong>: We made a Python GUI with tkinter so certain groceries could be selected. Built a Python bot to web scrape the wegmans.com site to retrieve cost and location of the selected groceries. Created a fictional Wegman's-based grocery store with 20 aisles in a 10x10 grid, and would place the selected groceries in the appropriate aisles. Using the A* pathfinding algorithm, an optimal route would be calculated, and presneted to the user in an animation and a graph.
+                            <br>
+                            <br>
+                            <strong>Results</strong>: Our application won Best Accessibility Project and Best Overall Project at the Hackathon!
+                            <br>
+                            <br>
+                            <a href="https://devpost.com/software/wegmans-grocery-path-finer" style="color: #F2EBE3; text-decoration: underline;" target="_blank">Hackathon Page</a> | <a href="https://github.com/KevLeg5/CuseHacks" style="color: #F2EBE3; text-decoration: underline;" target="_blank">View Files</a>
+                        </div>
+                        <div>
+                        <video width="640" height="360" controls>
+                          <source src="softwareMedia/cusehacks.mp4" type="video/mp4">
+                          Your browser does not support the video element.
+                        </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tab-content">
+                
+            </div>
+        </div>
+        <!-- Rest of your HTML remains the same -->
+        <div class="tab ats">
+            <div class="tab-header">
+                <h2 style="display: flex; align-items: center; gap: 10px;">
+                        Assignment Tracking System | 
+                        <img src="softwareMedia/igniton_logo.png" alt="Ignition Logo" style="width: 25px; height: auto;">
+                    </h2>
+                    <i class="arrow"></i>
+            </div>
+            <div class="tab-content">
+                <div class="content-wrapper">
+                    <div style="line-height:150%;">
+                        <strong>Skills</strong>: Ignition Maker Edition, Python, Java, SQL
+                        <br>
+                        <br>
+                        <strong>What is it?</strong> - A full-stack website and server project done for personal use, and possibly one day for public use.
+                        <br>
+                        <br>
+                        <strong>Goal</strong>: Through my first year of university I realized I did not like any of the online assignment tracking softwares, so I chose to build my own. I needed something configurable, secure, and provide me with good insight into my behaviors and patterns or work.
+                        <br>
+                        <br>
+                        <strong>Process</strong>: Using my expereince with Igniton from TTM Technolgies, I designed and licensed a local Ignition server from the ground up. I was able to build databases, API scripting, and frontend UIs to achieve what I needed. Every user is able to view their own upcoming assignments, historical assignments, configure semesters and courses, and see analytics on assignments.
+                        <br>
+                        <br>
+                        <strong>Future Plans</strong>: Currenty, the software is very bare bones, but it does what I need to manage my tasks. Eventually, I would like to host it publicly on a Raspberry Pi on the Syracuse University WiFi for all students to use, incorporate automated email and SMS sending, and build a more advanced analytics page.
+                    </div>
+                    <div id="carousel2" class="carousel-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab javaserver">
+            <div class="tab-header">
+                <h2 style="display: flex; align-items: center; gap: 10px;">
+                        Java Web Server | 
+                        <img src="softwareMedia/java_logo.png" alt="Java Logo" style="width: 30px; height: auto;">
+                    </h2>
+                    <i class="arrow"></i>
+            </div>
+            <div class="tab-content">
+                <div class="content-wrapper">
+                    <div style="line-height:150%;">
+                        <strong>Skills</strong>: Java, PHP, HTML, CSS
+                        <br>
+                        <br>
+                        <strong>What is it?</strong> - A local server for a final course project with three other classmates.
+                        <br>
+                        <br>
+                        <strong>Goal</strong>: We were tasked to either build a web server or a webpage, and my group decided to accomplish both. The base requirements were to have some level of authorization, GET, HEAD, and POST requests, and error logging.
+                        <br>
+                        <br>
+                        <strong>Process</strong>: Work was split equally amongst groupmates, with my main contribution being authorization and logging. Using a .csv file, I was able to add and store new users to the server. The logging was stored in a .txt file, which would store important info and errors while the server was running. Every 1000 entries, the logs would be wiped to save space in our file system.
+                        <br>
+                        <br>
+                        <strong>Results</strong>: The final server consisted of browser supported webpages, SSL connection, multithreading to host up to 20 clients at once, file downloading, picture and video support, and all the base requirements. Our server recieved a perfect grade and the highest in the course.
+                        <br>
+                        <br>
+                        <a href="https://github.com/KevLeg5/JavaWebServer" style="color: #F2EBE3; text-decoration: underline;" target="_blank">View Files</a>
+                    </div>
+                    <div>
+                        <video width="640" height="360" controls>
+                          <source src="softwareMedia/javaServerDemo.mp4" type="video/mp4">
+                          Your browser does not support the video element.
+                        </video>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab mlfq">
+            <div class="tab-header">
+                <h2 style="display: flex; align-items: center; gap: 10px;">
+                        Process Scheduling Simulator | 
+                        <img src="softwareMedia/mlfq_logo.png" alt="MLFQ Logo" style="width: 25px; height: auto;">
+                    </h2>
+                    <i class="arrow"></i>
+            </div>
+            <div class="tab-content">
+                <div class="content-wrapper">
+                    <div style="line-height:150%;">
+                        <strong>Skills</strong>: C++, Linux
+                        <br>
+                        <br>
+                        <strong>What is it?</strong> - An algorithm developed for a course project which can simulate scheduling and running processes on a CPU using three possible algorithms: Shortest Time to Completion, Round Robin, and Multi-level Feedback Queue.
+                        <br>
+                        <br>
+                        <strong>Process</strong>: The algorithm was ran from a shell, and required passing in parameters into the terminal for the number of queues, the time quantums of each for demotion, and the aging thresholds for promotion. The processes would be stored in a text file, with their priorities, arrival times, and duration. The algorithm would schedule the processes to run on a makeshift CPU, and then provide metrics such as turnaround time and response time to measure efficiency.
+                        <br>
+                        <br>
+                        <strong>Results</strong>: All three algortithms were successfully developed with single-queue and multi-queue data structures, and had execution performance similar to the best among the class.
+                        <br>
+                        <br>
+                        <a href="https://github.com/KevLeg5/mlfq" style="color: #F2EBE3; text-decoration: underline;" target="_blank">View Files</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- 
+        <div class="tab raymarching">
+            <div class="tab-header">
+                <h2 style="display: flex; align-items: center; gap: 10px;">
+                        Raymarching in VR | 
+                        <img src="softwareMedia/vr_logo.png" alt="VR Logo" style="width: 25px; height: auto;">
+                    </h2>
+                    <i class="arrow"></i>
+            </div>
+            <div class="tab-content">
+                <div class="content-wrapper">
+                    <div style="line-height:150%;">
+                        Upcoming project, will be updated once completed.
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    </div>
+    
+    <script src="softwareJS.js"></script>
+    <script src="../carousel.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const carousel1 = new CircularCarousel('#carousel1', ['softwareMedia/guiScreenshot.png','softwareMedia/botWorking.png','softwareMedia/walkingStore.png','softwareMedia/walkingRoute.png']);
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const carousel2 = new CircularCarousel('#carousel2', ['softwareMedia/atsHome.png','softwareMedia/atsNewAssignment.png', 'softwareMedia/atsUserSettings.png', 'softwareMedia/atsServer.png']);
+      });
+    </script>
+    
+</body>
+</html>

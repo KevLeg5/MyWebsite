@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #1A1A1A;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100vw;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    margin-bottom: 100px;
+    width: calc(100% - 40px); /* Account for padding */
+    max-width: 1200px;
+    gap: 60px;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.text, .large-carousel {
+    width: 40%;
+    margin: 0 20px;
+    color: #F2EBE3;
+}
+
+.text {
+    text-align: left;
+    max-width: 500px;
+}
+
+.section:nth-child(odd) .text {
+    text-align: left;
+}
+
+.section:nth-child(even) .text {
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    color: #F2EBE3;
+    padding: 20px;
+    font-size: 2.5em;
+    width: 100%;
+}
+
+.large-carousel {
+    width: 40%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Prevent carousel overflow */
+}
+
+.large-carousel .carousel-container {
+    transform: scale(1.5);
+    transform-origin: center;
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        padding: 50px 20px;
+        gap: 40px;
+    }
+    
+    .text, .large-carousel {
+        width: 90%;
+        margin: 0;
+    }
+    
+    .section:nth-child(even) {
+        flex-direction: column;
+    }
+}
+
+.footer {
+    bottom: 0; /* Positions it at the very bottom */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: #303030; /* Dark gray background */
+    color: #F2EBE3;
+    text-align: center; /* Centers the text */
+    padding: 10px 0; /* Adds some padding for spacing */
+    font-size: 12px; /* Small text size */
+}
+
+.contact-footer {
+    background-color: #202020;
+    padding: 10px 0; /* Reduce padding for thinner footer */
+    text-align: center;
+    color: #F2EBE3;
+    width: 100%;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 20px; /* Adds spacing between text and icons */
+}
+
+.contact-footer h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Tooltip container */
+.social-icon {
+    position: relative;
+    color: #F2EBE3;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #907163;
+    transform: scale(1.2);
+}
+
+/* Tooltip styling */
+.social-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 150%; /* Position above icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #F2EBE3;
+    padding: 5px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.social-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s; /* Appears after 0.5s */
+}
+

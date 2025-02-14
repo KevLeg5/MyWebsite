@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Leger</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="homeMedia/blackHole.png">
+    <link rel="stylesheet" href="homeStyle.css">
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'Work Experience')">Experience</button>
+        <button class="tablinks" onclick="openTab(event, 'Software')">Software</button>
+        <button class="tablinks" onclick="openTab(event, 'Hardware')">Hardware</button>
+        <button class="tablinks" onclick="openTab(event, 'Personal')">Personal</button>
+    </div>
+    <!-- Tab Content -->
+    <div id="Home" class="tabcontent">
+        <!-- Background section with image and text -->
+        <div class="background">
+            <div class="content">
+                <h1>Kevin Leger</h1>
+            </div>
+            <div class="bottom-right-text">
+                <p>Computer Engineering and MBA Student</p>
+            </div>
+        </div>
+        <!-- Syracuse Text Image -->
+        <div style="display: flex; justify-content: center; padding: 20px 0; background: #303030;">
+            <img src="homeMedia/syracuseText.png" alt="Syracuse Text" style="max-width: 100%; height: auto;">
+        </div>
+        <!-- Scrollable content -->
+        <div class="scroll-content" style="background: linear-gradient(to bottom,#303030,#4d2210);">
+            <h2 style="text-align: center;">Resume</h2>
+            <div style="display: flex; justify-content: center;">
+                <object
+                    data="homeFiles/Resume_2025.pdf"
+                    type="application/pdf"
+                    width="40%"
+                    height="800px"
+                    style="border: none;"
+                >
+                    <embed 
+                        src="homeFiles/Resume_2025.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=75"
+                        type="application/pdf"
+                        width="100%"
+                        height="100%"
+                    />
+                </object>
+            </div>
+        </div>
+        <div class="scroll-content" style="background: linear-gradient(to bottom,#4d2210,#303030);">
+            <h2 style="text-align: center;">Academic Transcript</h2>
+            <div style="display: flex; justify-content: center;">
+                <object
+                    data="homeFiles/transcript_2025.pdf"
+                    type="application/pdf"
+                    width="40%"
+                    height="800px"
+                    style="border: none;">
+                    <embed 
+                        src="homeFiles/transcript_2025.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=75"
+                        type="application/pdf"
+                        width="100%"
+                        height="100%"
+                    />
+                </object>
+            </div>
+        </div>
+            <footer class="contact-footer">
+                <div class="contact-container">
+                    <h3>Contact Me: </h3>
+                    <div class="social-icons">
+                        <a href="mailto:kpleger@syr.edu" class="social-icon" data-tooltip="Email" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kevin-leger-6f0j3a" class="social-icon" data-tooltip="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://calendly.com/kevinpaulleger/screeninterview2024" class="social-icon" data-tooltip="Calendly" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-calendar-alt"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kevins__leg/" class="social-icon" data-tooltip="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/KevLeg5" class="social-icon" data-tooltip="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+
+
+    </div>
+    <div id="Work Experience" class="tabcontent">
+        <iframe src="experience/experience.html"></iframe>
+    </div>
+    <div id="Software" class="tabcontent">
+        <iframe src="software/software.html"></iframe>
+    </div>
+    <div id="Hardware" class="tabcontent">
+        <iframe src="hardware/hardware.html"></iframe>
+    </div>
+    <div id="Personal" class="tabcontent">
+        <iframe src="personal/personal.html"></iframe>
+    </div>
+    <script src="homeJS.js"></script>
+
+</body>
+</html>

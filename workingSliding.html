@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      position: relative;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      width: 200px;
+      height: 150px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-slide.current {
+      z-index: 3;
+      transform: scale(1);
+      opacity: 1;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .carousel-slide.preview-left {
+      transform: translateX(-85%) scale(0.7);
+      opacity: 0.5;
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    .carousel-slide.preview-right {
+      transform: translateX(85%) scale(0.7);
+      opacity: 0.5;
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    .carousel-slide.preview-left:hover,
+    .carousel-slide.preview-right:hover {
+      opacity: 0.8;
+    }
+
+    .carousel-slide.preview-left:hover {
+      transform: translateX(-85%) scale(0.75);
+    }
+
+    .carousel-slide.preview-right:hover {
+      transform: translateX(85%) scale(0.75);
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- Slides will be inserted here by JavaScript -->
+    </div>
+  </div>
+
+  <script>
+    class CircularCarousel {
+      constructor(container) {
+        this.container = container;
+        this.track = container.querySelector('.carousel-track');
+        
+        this.images = [
+          'media/image1.jpg',
+          'media/image2.jpg',
+          'media/image5.jpg',
+          'media/homeBackground.jpg',
+          'media/blackHole.png'
+        ];
+        
+        this.currentIndex = 0;
+        this.init();
+      }
+
+      init() {
+        // Create slides
+        this.images.forEach((src, index) => {
+          const slide = document.createElement('div');
+          slide.className = 'carousel-slide';
+          slide.innerHTML = `<img src="${src}" alt="Image ${index + 1}">`;
+          
+          slide.addEventListener('click', () => {
+            if (index !== this.currentIndex) {
+              this.goToSlide(index);
+            }
+          });
+          
+          this.track.appendChild(slide);
+        });
+
+        this.updateSlides();
+      }
+
+      getCircularIndex(index) {
+        if (index < 0) return this.images.length - 1;
+        if (index >= this.images.length) return 0;
+        return index;
+      }
+
+      updateSlides() {
+        const slides = this.track.querySelectorAll('.carousel-slide');
+
+        slides.forEach((slide) => {
+          slide.className = 'carousel-slide';
+        });
+
+        // Only show and position the three visible slides
+        const currentSlide = slides[this.currentIndex];
+        const prevSlide = slides[this.getCircularIndex(this.currentIndex - 1)];
+        const nextSlide = slides[this.getCircularIndex(this.currentIndex + 1)];
+
+        currentSlide.classList.add('current');
+        prevSlide.classList.add('preview-left');
+        nextSlide.classList.add('preview-right');
+      }
+
+      goToSlide(index) {
+        this.currentIndex = index;
+        this.updateSlides();
+      }
+    }
+
+    // Initialize the carousel
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = new CircularCarousel(document.querySelector('.carousel-container'));
+    });
+  </script>
+</body>
+</html>

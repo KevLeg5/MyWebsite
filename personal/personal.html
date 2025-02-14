@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="personal.css">
+    <link rel="stylesheet" href="../carousel.css">
+</head>
+<body>
+    <h1>Personal Life</h1>
+
+    <div class="main-container">
+        <div class="section">
+            <div class="text">
+                <h2>My Journey</h2>
+                <p>My name is Kevin Leger. I was born in NYC, but grew up in Tolland Connecticut, a rural town of ~14,000. I am currently 20 years old and stand at 6'2" (188cm). My parents are both first generation immigrants to the United States, my mom from Poland and my dad from Canada. My upbringing has been rooted in family traditions and values from both sides. I strongly value my relationships with family and friends. I have deep passions for sports, music, technology, and gaming, as you will see!</p>
+            </div>
+            <div class="image large-carousel">
+                <div id="carousel1" class="carousel-container"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Sports</h2>
+                <p>My love for sports and staying active started before I can remember. I have grown up playing soccer, basketball, skiing, and golf, and more recently picked up tennis and volleyball. I have watched leagues such as the NFL, NBA, CFB, PGA, ATP, and many of the European football leagues. I also consistently workout, and play many of these sports on intramural leagues. Feel free to hit me up to chat about sports!</p>
+            </div>
+            <div class="image large-carousel">
+                <div id="carousel2" class="carousel-container"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Music</h2>
+                    <p>
+                        Because I spend roughly 2-3 hours every day listening to music, I'd say it's a large 
+                        part of my personal life. My top genres and artists include:
+                    </p>
+                    <ul>
+                        <li>R&B - Giveon</li>
+                        <li>Hip-Hop - Kendrick Lamar</li>
+                        <li>Classic Rock - Led Zeppelin</li>
+                        <li>Latin - Kali Uchis</li>
+                        <li>Jazz - Duke Ellington</li>
+                    </ul>
+                    <p>
+                        Take a look at some of my favorite albums, and feel free to check out my playlists 
+                        @kevinpaulleger on Spotify!
+                    </p>
+            </div>
+            <div class="image large-carousel">
+                <div id="carousel3" class="carousel-container"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="text">
+                <h2>Gaming</h2>
+                <p>
+                    While I am not the biggest gamer, I do enjoy a few video games when I have the time.
+                    Here are my main games:
+                </p>
+                <p>
+                    <strong>World of Tanks Blitz</strong><br>
+                    8+ years of experience<br>
+                    Over 9,000 battles<br>
+                    7 tier X tanks unlocked
+                </p>
+                <p>
+                    <strong>Rocket League</strong><br>
+                    ~2 years of experience<br>
+                    Over 400 wins
+                </p>
+                <p>
+                    <strong>Clash Royale</strong><br>
+                    10+ years of experience<br>
+                    Over 2,900 battles won
+                </p>
+                <p>
+                    For me, all three games are completely free to play. Reach out if you ever want to 
+                    play anything, I am open for any game!
+                </p>
+            </div>
+            <div class="image large-carousel">
+                <div id="carousel4" class="carousel-container"></div>
+            </div>
+        </div>
+
+        <footer class="contact-footer">
+                <div class="contact-container">
+                    <h3>Contact Me: </h3>
+                    <div class="social-icons">
+                        <a href="mailto:kpleger@syr.edu" class="social-icon" data-tooltip="Email" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kevin-leger-6f0j3a" class="social-icon" data-tooltip="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://calendly.com/kevinpaulleger/screeninterview2024" class="social-icon" data-tooltip="Calendly" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-calendar-alt"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kevins__leg/" class="social-icon" data-tooltip="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/KevLeg5" class="social-icon" data-tooltip="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+    </div>
+
+    <script src="personalJS.js"></script>
+    <script src="../carousel.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel1 = new CircularCarousel('#carousel1', ['personalMedia/personal3.jpeg', 'personalMedia/personal1.png', 'personalMedia/personal5.jpeg', 'personalMedia/painting.jpeg', 'personalMedia/personal6.jpeg', 'personalMedia/personal4.jpeg', 'personalMedia/personal2.jpeg']);
+            const carousel2 = new CircularCarousel('#carousel2', ['personalMedia/soccer.jpg', 'personalMedia/golf.jpeg', 'personalMedia/tennis.jpeg', 'personalMedia/climbing.jpeg', 'personalMedia/golf2.jpeg']);
+            const carousel3 = new CircularCarousel('#carousel3', ['personalMedia/giveon2.png', 'personalMedia/damn2.png', 'personalMedia/mothership2.png', 'personalMedia/kali2.png', 'personalMedia/duke2.png']);
+            const carousel4 = new CircularCarousel('#carousel4', ['personalMedia/tanks2.png', 'personalMedia/rl2.png', 'personalMedia/clash2.png']);
+        });
+    </script>
+</body>
+</html>

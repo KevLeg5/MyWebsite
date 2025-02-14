@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="hardware.css">
+    <link rel="stylesheet" href="../carousel.css">
+</head>
+<body>
+    <div class="content-container">
+        <div class="header-container">
+            <h1>Hardware Projects</h1>
+        </div>
+        <div style="color: #F2EBE3; margin-bottom: 30px;">
+            Some of my hardware focused projects or assignments I'm most proud of.
+        </div>
+            <div class="tab elevator">
+                <div class="tab-header">
+                    <h2 style="display: flex; align-items: center; gap: 10px;">
+                        Microcontroller Elevator | 
+                        <img src="hardwareMedia/microchip_logo.png" alt="Microchip Logo" style="width: 30px; height: auto;">
+                    </h2>
+                    <i class="arrow"></i>
+                </div>
+                <div class="tab-content">
+                    <div class="content-wrapper">
+                        <div style="line-height:150%;">
+                            <strong>Skills</strong>: MPLabs, Microcontroller Programming, Circuit Construction
+                            <br>
+                            <br>
+                            <strong>Goal</strong>: Configure a microcontroller and a breadboard to mimic the behavior of an elevator moving between 9 separate floors fulfilling requests. 
+                            <br>
+                            <br>
+                            <strong>Process</strong>: Using an ATSAMD21E18A microcontroller along with various components (keypad, LCD, LEDs, and buzzer), we needed to develop a functional elevator system that could navigate floors 1-9 based on user input. The passenger would have to be able to choose a direction, a floor, and open/close the door of the elevator, all through the keypad inputs. The implementation required extensive microcontroller configuration, including port registers for input/output management, Timer/Counter (TC) registers for timing control and delay generation, system control registers for clock configuration, External Interrupt Controller (EIC) registers for keypad interrupt handling, and various LCD functionalities for digital and hexadecimal writing operations. I was primarily responsible for the wiring and the FSM-like code behind the elevator's logic.
+                            <br>
+                            <br>
+                            <strong>Results</strong>: After writing ~570 lines of code and making numerous wiring adjustments, we successfully implemented and demonstrated a working elevator system that could respond to passenger floor selections and door controls through the keypad. We were the only group in this class to finish this assignment on time, and recieved a 100/100 on it. 
+                            <br>
+                            <br>
+                            <a href="https://github.com/KevLeg5/elevator" style="color: #F2EBE3; text-decoration: underline;" target="_blank">View Files</a>
+                        </div>
+                        <div>
+                        <video width="360" height="480" controls>
+                          <source src="hardwareMedia/elevatorDemo.mp4" type="video/mp4">
+                          Your browser does not support the video element.
+                        </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tab-content">
+                
+            </div>
+        </div>
+        <!-- Rest of your HTML remains the same -->
+        <div class="tab vhdl">
+            <div class="tab-header">
+                <h2 style="display: flex; align-items: center; gap: 10px;">
+                        CSE262 CPU | 
+                        <img src="hardwareMedia/vhdl_logo.png" alt="Microchip Logo" style="width: 30px; height: auto;">
+                    </h2>
+                    <i class="arrow"></i>
+            </div>
+            <div class="tab-content">
+                <div class="content-wrapper">
+                    <div style="line-height:150%;">
+                        <strong>Skills</strong>: VHDL, Quartus Prime, FPGA, Assembly
+                        <br>
+                        <br>
+                        <strong>What is it?</strong> - A very rudamentary CPU to read basic assembly for a school lab.
+                        <br>
+                        <br>
+                        <strong>Goal</strong>: The goal was to program an FPGA board in VHDL to be capable of reading specific 4-bit instructions from a premade ROM, and then perform ALU logic and update registers accordingly.
+                        <br>
+                        <br>
+                        <strong>Process</strong>: This small CPU was an accumulation of previous labs, including 7-segment display LEDs and Finite State Machines. Our CPU consisted of two 4-bit data buses, an instruction register, operand register, accumulator register, Z-flag register to check equality, program counter, ALU, FSM (for flagging), and a 16 line ROM. 
+                        <br>
+                        We designed and implemented four instructions: LD (load), ADDA (add), CMPA (compare), and BEQ (branch if equal). We then had to configure the ROM so that the CPU could start the accumulator out at 3 and counts by 3s until 9, then re-start the accumulator at 2 and count up by 3s, and do this forever.
+                        <br>
+                        <br>
+                        <a href="hardwareMedia/cse262cpu.mp4" style="color: #F2EBE3; text-decoration: underline;" target="_blank">Video Demo</a> | <a href="https://github.com/KevLeg5/cse262cpu" style="color: #F2EBE3; text-decoration: underline;" target="_blank">View Files</a>
+                    </div>
+                    <div id="carousel1" class="carousel-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab vlsi">
+            <div class="tab-header">
+                <h2 style="display: flex; align-items: center; gap: 10px;">
+                        Synopsys/Cadence Transistor Analysis | 
+                        <img src="hardwareMedia/vlsi_logo.png" alt="Java Logo" style="width: 20px; height: auto;">
+                    </h2>
+                    <i class="arrow"></i>
+            </div>
+            <div class="tab-content">
+                <div class="content-wrapper">
+                    <div style="line-height:150%;">
+                        <strong>Skills</strong>: Synopsys, Cadence, CMOS Transistors, MOSFET
+                        <br>
+                        <br>
+                        <strong>What is it?</strong> - Deep analysis and design of CMOS inverters.
+                        <br>
+                        <br>
+                        <strong>Goal</strong>: School labs intended to help understand the concepts of CMOS inverters, voltage thresholds, and high-low propogation.
+                        <br>
+                        <br>
+                        <strong>Synopsys</strong>: This is a software designed to help us view graphical representations of .sw files, which contain information about specific CMOS transistors. Through analysis of these files, I was able to visualize the concepts of cutoff voltage and Shockley's Model.
+                        <br>
+                        <br>
+                        <strong>Cadende</strong>: A tool for designining transistors manually for later development. We designed an inverter using this tool, with wells, active layers, metals, vias, and contacts.
+                    </div>
+                    <div id="carousel2" class="carousel-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script src="hardwareJS.js"></script>
+    <script src="../carousel.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const carousel1 = new CircularCarousel('#carousel1', ['hardwareMedia/cse262.jpg', 'hardwareMedia/cse262layout.jpg', 'hardwareMedia/cse262rtl.jpg', 'hardwareMedia/cse262fsm.jpg', 'hardwareMedia/cse262assembly.jpg']);
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const carousel2 = new CircularCarousel('#carousel2', ['hardwareMedia/img1464.jpg', 'hardwareMedia/img2464.jpg', 'hardwareMedia/img3464.jpg', 'hardwareMedia/img4464.jpg']);
+      });
+    </script>
+    
+</body>
+</html>

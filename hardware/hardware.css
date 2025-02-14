@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #303030, #1A231A);
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: right;
+    color: #F2EBE3;
+
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.tab {
+    margin-bottom: 45px;  /* Increased spacing between tabs */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tab-header {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.tab-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+
+}
+
+.tab-content {  
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #F2EBE3;
+    padding: 0 15px;
+}
+
+.tab.active .tab-content {
+    max-height: 500px;
+    padding: 15px;
+}
+
+
+/* Hackathon */
+.elevator .tab-header {
+    background-color: #4A2223;
+    color: #F2EBE3;
+
+}
+
+.elevator .tab-content {
+    background-color: #181818;
+    color: #F2EBE3;
+}
+
+/* vhdl */
+.vhdl .tab-header {
+    background-color: #1A3820;
+    color: #FFFFFF;
+}
+
+.vhdl .tab-content {
+    background-color: #181818;
+    color: #F2EBE3;
+}
+
+/* java web server */
+.vlsi .tab-header {
+    background-color: #212f3c;
+    color: #F2EBE3;
+}
+
+.vlsi .tab-content {
+    background-color: #181818;
+    color: #F2EBE3;
+}
+
+.arrow {
+    border: solid;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.tab.active .arrow {
+    transform: rotate(-135deg);
+}
+
+.tab:hover .tab-header {
+    filter: brightness(120%);
+}
+
+.content-container {
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-begin;
+    padding-right: 20px;  /* Align with the tabs */
+}

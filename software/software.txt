@@ -1,0 +1,55 @@
+Plans for software projects
+
+wegmans pathfinder
+
+A project developed in under 24 hours for the Fall 2024 CuseHacks Hackathon with four other friends. 
+
+Goal: Develop an application where a user could select items they need and be given an optimal path to walk the store, which would cut down the total time spent getting groceries.
+
+Process: We made a Python GUI with tkinter so certain groceries could be selected. Built a Python bot to web scrape the Wegmans.com site to retrieve cost and location of the selected groceries. Created a fictional Wegman's-based grocery store with 20 aisles in a 10x10 grid, and would place the selected groceries in the appropriate aisles. Using the A* pathfinding algorithm, an optimal route would be calculated, and presneted to the user in an animation and a graph.
+
+Results: Our application won Best Accessibility Project and Best Overall Project at the Hackathon!
+
+java web server
+
+ignition ATS
+
+Skills: Ignition Maker Edition, Python, Java, SQL
+
+A full-stack website and server project done for personal use, and possibly one day for public use.
+
+Goal: Through my first year of university I realized I did not like any of the online assignment tracking softwares, so I chose to build my own. I needed something configurable, secure, and provide me with good insight into my behaviors and patterns or work.
+
+Process: Using my expereince with Igniton from TTM Technolgies, I designed and licensed a local Ignition server from the ground up. I was able to build databases, API scripting, and frontend UIs to achieve what I needed. Every user is able to view their own upcoming assignments, historical assignments, configure semesters and courses, and see analytics on assignments.
+
+Future Plans: Currenty, the software is very bare bones, but it does what I need to manage my tasks. Eventually, I would like to host it publicly on a Raspberry Pi on the Syracuse University WiFi for all students to use, incorporate automated email and SMS sending, and build a more advanced analytics page.
+
+
+
+Raymarching in VR
+
+Binary compression algorithm
+
+MLFQ (once completed)
+
+
+
+
+Plans for hardware projects
+
+CSE262 CPU
+
+ASTAMD21E18A Microcontroller Elevator
+
+Cadence/Synopsys Transistor
+
+
+
+Plans for personal
+
+Images
+
+About me
+
+Contact me? or maybe at the footer
+
